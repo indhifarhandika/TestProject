@@ -11,7 +11,7 @@ const GoalInput = props => {
   return (
     <View style={styles.inputContainer}>
       <TextInput
-        placeholder="Course Goal"
+        placeholder="Input here"
         style={styles.input}
         onChangeText={goalInputHandler}
         value={enteredGoal}
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     width: '80%',
     borderColor: 'black',
     borderWidth: 1,
-    padding: 10
+    padding: 10,
+    borderRadius: 10
   }
 });
 
