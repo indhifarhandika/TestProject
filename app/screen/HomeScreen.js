@@ -49,14 +49,12 @@ const AppView = () => {
 
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../../assets/images.jpeg')} style={{ flex: 1, resizeMode: 'cover' }}>
-                <GoalInput onAddGoal={addGoalHandler} />
-                <FlatList
-                    keyExtractor={(item, index) => item.id}
-                    data={courseGoals}
-                    renderItem={itemData => <GoalItem title={itemData.item.value} />}
-                />
-            </ImageBackground>
+            <GoalInput onAddGoal={addGoalHandler} />
+            <FlatList
+                keyExtractor={(item, index) => item.id}
+                data={courseGoals}
+                renderItem={itemData => <GoalItem title={itemData.item.value} />}
+            />
         </View>
     )
 }

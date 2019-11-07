@@ -15,7 +15,6 @@ const GoalInput = props => {
         style={styles.input}
         onChangeText={goalInputHandler}
         value={enteredGoal}
-        style={{ color: 'white' }}
       />
       <TouchableOpacity onPress={props.onAddGoal.bind(this, enteredGoal)}>
         <Text>Add</Text>
