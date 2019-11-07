@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
 
 const GoalInput = props => {
   const [enteredGoal, setEnteredGoal] = useState('');
@@ -15,8 +15,11 @@ const GoalInput = props => {
         style={styles.input}
         onChangeText={goalInputHandler}
         value={enteredGoal}
+        style={{ color: 'white' }}
       />
-      <Button title="ADD" onPress={props.onAddGoal.bind(this, enteredGoal)} />
+      <TouchableOpacity onPress={props.onAddGoal.bind(this, enteredGoal)}>
+        <Text>Add</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
-    borderColor: 'black',
+    borderColor: '#00e5ff',
     borderWidth: 1,
     padding: 10,
     borderRadius: 10
